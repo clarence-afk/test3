@@ -179,11 +179,11 @@ class VRButton{
 
     }
 
-    stylizeElement(element, active = true, fontSize = 13, ignorePadding = false) {
+    stylizeElement(element, active = true, fontSize = 13, ignorePadding = false, applyDonateStyle = false) {
         element.style.position = 'absolute';
-        element.style.top = '50%'; // Position the top edge of the button in the middle of the screen
-        element.style.left = '50%'; // Position the left edge of the button in the middle of the screen
-        element.style.transform = 'translate(-50%, -50%)'; // Move the button up and left by half its width and height to perfectly center it
+        element.style.top = '50%';
+        element.style.left = '50%';
+        element.style.transform = 'translate(-50%, -50%)';
         if (!ignorePadding) element.style.padding = '12px 6px';
         element.style.border = '1px solid #fff';
         element.style.borderRadius = '4px';
@@ -194,6 +194,19 @@ class VRButton{
         element.style.opacity = '0.5';
         element.style.outline = 'none';
         element.style.zIndex = '999';
+
+        // Apply donate style if requested
+        if (applyDonateStyle) {
+            element.classList.add('btn-donate');
+            element.style.setProperty('--clr-font-main', 'hsla(0 0% 20% / 100)');
+            element.style.setProperty('--btn-bg-1', 'hsla(194 100% 69% / 1)');
+            element.style.setProperty('--btn-bg-2', 'hsla(217 100% 56% / 1)');
+            element.style.setProperty('--btn-bg-color', 'hsla(360 100% 100% / 1)');
+            element.style.setProperty('--radii', '0.5em');
+            element.style.transition = '0.8s';
+            element.style.backgroundSize = '280% auto';
+            element.style.backgroundImage = 'linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%)';
+            element.style.boxShadow = '0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35)';
     }
 
 
