@@ -180,10 +180,10 @@ class VRButton{
     }
 
     stylizeElement(element, active = true, fontSize = 13, ignorePadding = false) {
-        element.style.position = 'fixed'; // Use fixed positioning to keep the button centered
-        element.style.bottom = '10px'; // Adjust bottom position to center vertically
-        element.style.left = '50%'; // Center horizontally
-        element.style.transform = 'translateX(-50%)'; // Offset the left positioning to truly center the button
+        element.style.position = 'fixed'; // Fixed positioning to keep the button centered
+        element.style.bottom = 'calc(50% - 30px)'; // Calculate vertical centering
+        element.style.left = 'calc(50% - 30px)'; // Calculate horizontal centering
+        element.style.transform = 'translate(-50%, -50%)'; // Offset the positioning to truly center the button
         if (!ignorePadding) element.style.padding = '16px 8px'; // Increase padding for a bigger button
         element.style.border = '1px solid #fff';
         element.style.borderRadius = '50%'; // Keep the button circular
@@ -197,7 +197,6 @@ class VRButton{
         element.style.width = '60px'; // Increase width and height to make the button bigger
         element.style.height = '60px';
         element.style.transition = 'background-color 0.3s ease';
-
         element.style.backgroundColor = '#400E93'; // Original background color
         element.onmouseover = function () {
             this.style.backgroundColor = '#E82764'; // Change on hover
@@ -206,6 +205,7 @@ class VRButton{
             this.style.backgroundColor = '#400E93'; // Revert on mouse out
         };
     }
+
 
 
 		
