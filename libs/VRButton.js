@@ -181,8 +181,8 @@ class VRButton{
 
     stylizeElement(element, active = true, fontSize = 13, ignorePadding = false) {
         element.style.position = 'fixed'; // Fixed positioning to keep the button centered
-        element.style.bottom = 'calc(50% - 30px)'; // Attempt to center vertically
-        element.style.left = 'calc(50% - 30px)'; // Attempt to center horizontally
+        element.style.bottom = 'calc(50% - 30px)'; // Calculate vertical centering
+        element.style.left = 'calc(50% - 30px)'; // Calculate horizontal centering
         element.style.transform = 'translate(-50%, -50%)'; // Offset the positioning to truly center the button
         if (!ignorePadding) element.style.padding = '16px 8px'; // Increase padding for a bigger button
         element.style.border = '1px solid #fff';
@@ -197,15 +197,13 @@ class VRButton{
         element.style.width = '60px'; // Increase width and height to make the button bigger
         element.style.height = '60px';
         element.style.transition = 'background-color 0.3s ease';
-        element.style.backgroundColor = '#400E93'; // Original background color
+        element.style.backgroundColor = '#4B0082'; // Original background color
         element.onmouseover = function () {
-            this.style.backgroundColor = '#E82764'; // Change on hover
+            this.style.backgroundColor = '#CD5C5C'; // Change on hover
         };
         element.onmouseout = function () {
-            this.style.backgroundColor = '#400E93'; // Revert on mouse out
+            this.style.backgroundColor = '#4B0082'; // Revert on mouse out
         };
-    }
-
     }
 
 
