@@ -185,7 +185,7 @@ class VRButton{
         element.style.bottom = '20px';
         if (!ignorePadding) element.style.padding = '12px 6px';
         element.style.border = '1px solid #fff';
-        element.style.borderRadius = '50%'; // Make the button circular
+        element.style.borderRadius = '4px';
         element.style.background = (active) ? 'rgba(20,150,80,1)' : 'rgba(180,20,20,1)';
         element.style.color = '#fff';
         element.style.font = `normal ${fontSize}px sans-serif`;
@@ -193,17 +193,7 @@ class VRButton{
         element.style.opacity = '0.5';
         element.style.outline = 'none';
         element.style.zIndex = '999';
-        element.style.width = '40px'; // Set equal width and height
-        element.style.height = '40px';
 
-        element.style.transition = 'background-color 0.3s ease';
-    element.style.backgroundColor = '#0a0a23'; // Original background color
-    element.onmouseover = function() {
-        this.style.backgroundColor = '#002ead'; // Change on hover
-    };
-    element.onmouseout = function() {
-        this.style.backgroundColor = '#0a0a23'; // Revert on mouse out
-    };
     }
 
 		
