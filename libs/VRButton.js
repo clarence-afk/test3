@@ -179,10 +179,11 @@ class VRButton{
 
     }
 
-    stylizeElement( element, active = true, fontSize = 13, ignorePadding = false ) {
-
+    stylizeElement(element, active = true, fontSize = 13, ignorePadding = false) {
         element.style.position = 'absolute';
-        element.style.bottom = '20px';
+        element.style.top = '50%'; // Position the top edge of the button in the middle of the screen
+        element.style.left = '50%'; // Position the left edge of the button in the middle of the screen
+        element.style.transform = 'translate(-50%, -50%)'; // Move the button up and left by half its width and height to perfectly center it
         if (!ignorePadding) element.style.padding = '12px 6px';
         element.style.border = '1px solid #fff';
         element.style.borderRadius = '4px';
@@ -193,8 +194,8 @@ class VRButton{
         element.style.opacity = '0.5';
         element.style.outline = 'none';
         element.style.zIndex = '999';
-
     }
+
 
 		
 
